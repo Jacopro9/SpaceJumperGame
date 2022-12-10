@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class HealthController : MonoBehaviour
 {
+    public static event Action OnPlayerDeath;
+
     public int playerHealth;
 
     [SerializeField] private Image[] hearts;
@@ -25,6 +28,11 @@ public class HealthController : MonoBehaviour
             else
             {
                 hearts[i].color = Color.black;
+            }
+            if (playerHealth <= 0)
+            {
+                playerHealth = 0;
+                OnPlayerDeath?.Invoke();
             }
                 
         }

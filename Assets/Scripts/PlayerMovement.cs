@@ -13,16 +13,30 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+    private void OnEnable()
+    {
+        HealthController.OnPlayerDeath += DisablePlayerMovement;
+    }
+
+    private void OnDisable()
+    {
+        HealthController.OnPlayerDeath -= DisablePlayerMovement;
+    }
+
     private float dirX = 0f;
     private enum MovementState { idle, running, jumping, falling }
+
+  
 
     // Start is called before the first frame update
     void Start()
     {
+
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        EnablePlayerMovement();
     }
 
     // Update is called once per frame
@@ -85,4 +99,21 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, 0.1f, jumpableGround);
     }
+
+    private void DisablePlayerMovement() 
+    {
+        anim.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void EnablePlayerMovement() 
+    {
+        anim.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+    }
 }
+    
+        
+    
+
+ 
