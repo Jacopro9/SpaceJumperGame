@@ -56,26 +56,15 @@ public class PlayerMovement : MonoBehaviour
     private void UpdateAnimationState()
     {
         MovementState state;
-        //Vector3 temp;
 
         if (dirX > 0f)
         {
             state = MovementState.running;
-            //temp = new Vector3(-1.0f, 1.0f, 1.0f);
-            //if (transform.localScale == temp)
-            //{
-            //    transform.localScale += new Vector3(2, 0, 0);
-            //}
             sprite.flipX = false;
         }
         else if (dirX < 0f)
         {
             state = MovementState.running;
-            //temp = new Vector3(1.0f, 1.0f, 1.0f);
-            //if (transform.localScale == temp)
-            //{
-            //    transform.localScale += new Vector3(-2, 0, 0);
-            //}
             sprite.flipX = true;
         }
         else

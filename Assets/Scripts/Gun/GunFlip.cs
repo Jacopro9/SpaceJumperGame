@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunFlip : MonoBehaviour
 {
     [SerializeField] private Transform Aim;
+    [SerializeField] private Transform GunEndPoint;
 
     private SpriteRenderer sprite;
 
@@ -20,10 +21,12 @@ public class GunFlip : MonoBehaviour
         if (Aim.rotation.eulerAngles.z < 90 || Aim.rotation.eulerAngles.z > 270)
         {
             sprite.flipY = false;
+            GunEndPoint.localPosition = new Vector3(0.59f, 0.126f, 0f);
         }
         else
         {
-            sprite.flipY = true; 
+            sprite.flipY = true;
+            GunEndPoint.localPosition = new Vector3(0.59f, -0.126f, 0f);
         }
     }
 }
