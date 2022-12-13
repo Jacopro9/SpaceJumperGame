@@ -100,6 +100,15 @@ public class PlayerMovement : MonoBehaviour
         anim.enabled = true;
         rb.bodyType = RigidbodyType2D.Dynamic;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Powerup");
+        {
+            Debug.Log("Powerup");
+        }
+
+    }
 }
     
         
