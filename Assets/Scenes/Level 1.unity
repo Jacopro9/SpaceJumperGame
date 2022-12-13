@@ -147,8 +147,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177925903}
+<<<<<<< Updated upstream
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.59000003, y: 0.12600005, z: 0}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.43, y: 0.08, z: 0}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2651,6 +2656,7 @@ GameObject:
   - component: {fileID: 1400447161}
   - component: {fileID: 1400447162}
   - component: {fileID: 1400447163}
+  - component: {fileID: 1400447164}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -2765,7 +2771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400447156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.416, z: 0}
+  m_LocalPosition: {x: -0.91, y: 2.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2822,6 +2828,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c6a873eec96ee4c8b64370392cac0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1400447164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400447156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d002334c87907f24ab5b149d98c15ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 177925904}
+  bulletPrefab: {fileID: 7600069987348143237, guid: 3404534e77c7bc0418cd6cc5260c2b5c, type: 3}
 --- !u!1 &1408851768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,8 +3020,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1540024069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.48, y: 0.04, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.531, y: 0.04, z: 0}
+  m_LocalScale: {x: 1.1375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 177925904}
@@ -3222,6 +3242,7 @@ GameObject:
   - component: {fileID: 1679072293}
   - component: {fileID: 1679072292}
   - component: {fileID: 1679072296}
+  - component: {fileID: 1679072297}
   m_Layer: 0
   m_Name: Enemy (temp sprite)
   m_TagString: Untagged
@@ -3357,6 +3378,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bombDamage: 3
   _healthController: {fileID: 713303169}
+--- !u!114 &1679072297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679072291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d21450fb602204cbdf80f6e6a10c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  deathEffect: {fileID: 0}
 --- !u!1 &1709402379
 GameObject:
   m_ObjectHideFlags: 0
