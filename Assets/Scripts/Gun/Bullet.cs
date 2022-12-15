@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private GameObject bulletImpactPrefab;
+
     public float speed = 10f;
 
     public int damage = 35;
