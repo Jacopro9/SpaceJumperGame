@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] public float moveSpeed = 7f;
+    [SerializeField] public float jumpForce = 14f;
     [SerializeField] private LayerMask jumpableGround;
 
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Powerup");
         }
-
+      
     }
 }
     
