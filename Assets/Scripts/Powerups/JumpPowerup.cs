@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpPowerup : MonoBehaviour
 {
-    public float increase = 14f;
+    public float increase = 5f;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,7 +15,8 @@ public class JumpPowerup : MonoBehaviour
             PlayerMovement PlayerMovement = player.GetComponent<PlayerMovement>();
             if (PlayerMovement)
             {
-                PlayerMovement.jumpForce = increase;
+                PlayerMovement.jumpForce += increase;
+                Destroy(gameObject);
             }
         }
     }

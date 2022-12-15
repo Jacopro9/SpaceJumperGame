@@ -5,7 +5,7 @@ public class SpeedPowerup : MonoBehaviour
 {
 
 
-    public float increase = 14f;
+    public float increase = 3f;
 
    
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +16,8 @@ public class SpeedPowerup : MonoBehaviour
             PlayerMovement PlayerMovement = player.GetComponent<PlayerMovement>();
              if(PlayerMovement)
             {
-                PlayerMovement.moveSpeed = increase;
+                PlayerMovement.moveSpeed += increase;
+                Destroy(gameObject);
             }
         }
     }
