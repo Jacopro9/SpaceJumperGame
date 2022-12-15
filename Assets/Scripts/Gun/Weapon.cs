@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private AudioSource gunFiringSound;
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -14,14 +13,12 @@ public class Weapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
-
-            FindObjectOfType<AudioManager>().Play("BulletShoot");
         }
     }
 
     void Shoot()
     {
-        gunFiringSound.Play();
+        FindObjectOfType<AudioManager>().Play("BulletShoot");
         Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 }
