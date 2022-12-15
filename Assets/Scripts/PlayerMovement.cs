@@ -105,11 +105,19 @@ public class PlayerMovement : MonoBehaviour
     {
         if(collision.tag == "Powerup");
         {
-            Debug.Log("Powerup");
+            StartCoroutine(ResetPower());
+            //GetComponent<SpriteRenderer>().color = Color.blue;
         }
       
     }
+    private IEnumerator ResetPower()
+    {
+        yield return new WaitForSeconds(10);
+        jumpForce = 10;
+        moveSpeed = 7;
+    }
 }
+
     
         
     
