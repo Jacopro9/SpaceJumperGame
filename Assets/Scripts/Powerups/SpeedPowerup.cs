@@ -18,6 +18,7 @@ public class SpeedPowerup : MonoBehaviour
             {
                 PlayerMovement.moveSpeed += increase;
                 Destroy(gameObject);
+                FindObjectOfType<AudioManager>().Play("PowerupPickup");
             }
         }
     }
