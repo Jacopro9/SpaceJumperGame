@@ -17,6 +17,7 @@ public class JumpPowerup : MonoBehaviour
             {
                 PlayerMovement.jumpForce += increase;
                 Destroy(gameObject);
+                FindObjectOfType<AudioManager>().Play("PowerupPickup");
             }
         }
     }
