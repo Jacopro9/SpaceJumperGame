@@ -26,10 +26,10 @@ public class Bullet1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        Player player = hitInfo.GetComponent<Player>();
-        if (player != null)
+        PlayerHP playerHP = hitInfo.GetComponent<PlayerHP>();
+        if (playerHP != null)
         {
-            player.TakeDamage(damage);
+            playerHP.TakeDamage(damage);
         }
         if (!hitInfo.gameObject.CompareTag("Enemy"))
         {

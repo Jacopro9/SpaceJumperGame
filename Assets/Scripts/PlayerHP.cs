@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class PlayerHP : MonoBehaviour
 {
     public int health = 100;
-
+    public string textValue;
+    
     
 
     public void TakeDamage (int damage)
