@@ -137,6 +137,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletImpact1Prefab: {fileID: 7055443715721579095, guid: 92e153d16ace9eb4aaff4cf01d09642f, type: 3}
-  speed: 10
-  damage: 0
+  speed: 5
+  damage: 25
   rb: {fileID: 1480307181708495309}
